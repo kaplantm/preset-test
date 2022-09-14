@@ -1,0 +1,17 @@
+import { endpoints } from "../endpoints";
+/* for endpoint:
+{{constantCase method}}_{{constantCase name}}: "{{ route }}",
+*/
+import useSWR from "swr";
+
+export type {{camelCase method}}{{pascalCase name}}Params = {
+  id: string;
+};
+
+export type {{camelCase method}}{{pascalCase name}}Response = {};
+
+const use{{pascalCase method}}{{pascalCase name}} = (params: {{camelCase method}}{{pascalCase name}}Params): {{camelCase method}}{{pascalCase name}}Response => {
+  return useSWR([endpoints.{{constantCase method}}_{{constantCase name}}, params]);
+};
+
+export default use{{pascalCase method}}{{pascalCase name}};

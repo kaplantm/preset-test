@@ -1,0 +1,28 @@
+import { Meta, Story } from "@storybook/react";
+import use{{pascalCase method}}{{pascalCase name}}, { {{camelCase method}}{{pascalCase name}}Params } from "./use{{pascalCase method}}{{pascalCase name}}";
+
+export default {
+  title: "Hooks/API/use{{pascalCase method}}{{pascalCase name}}",
+  argTypes: {
+    hook: {
+      table: {
+        disable: true,
+      },
+    },
+    params: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+} as Meta;
+
+const Template: Story<{{camelCase method}}{{pascalCase name}}Params> = (args) => {
+  const results = use{{pascalCase method}}{{pascalCase name}}(args);
+  return <pre>{JSON.stringify(results, null, 2)}</pre>;
+}
+
+export const Standard = Template.bind({});
+Standard.args = {
+  id: '2'
+};
